@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTH-8" />
+  <title>Andrejs day2-usd1</title>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <div>Uzzmini vārdu:</div>
+    <div class="buttons">
+      <input type="text" id="testInput" />
+      <button class="btn1" id="btn1" onclick="btn2Function()">Click me</button>
+    </div>
+    <script>
+      var cnt = 0;
+      function btn2Function() {
+        let result = 0;
+        let userInput = document.getElementById("testInput").value;
+        console.log(userInput);
+        console.log(cnt);
+        if (userInput == 0) {
+          alert("Ievades lauks ir tukš!");
+        } else {
+          if (userInput == "Programmēšana") {
+            document.getElementById("btn1").style.backgroundColor = "green";
+            cnt = 0;
+          } else {
+            document.getElementById("btn1").style.backgroundColor = "red";
+            cnt++;
+          }
+          if (cnt == 3) {
+            alert("Tu jau mēģināji uzminēt 3 reizes!");
+            cnt = 0;
+          }
+        }
+
+        console.log(result);
+      }
+    </script>
+  </body>
+</html>

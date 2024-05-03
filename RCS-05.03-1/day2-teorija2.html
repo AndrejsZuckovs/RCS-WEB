@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTH-8" />
+  <title>Andrejs</title>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <div>Hello!</div>
+    <div class="buttons">
+      <input type="text" id="testInput" />
+      <button class="btn1" id="btn1" onclick="btnFunction()">Klik</button>
+    </div>
+    <script>
+      function btnFunction() {
+        console.log("btn1 Click!");
+        document.getElementById("btn1").style.backgroundColor = "green";
+        let userInput = document.getElementById("testInput").value;
+        alert(userInput);
+      }
+    </script>
+  </body>
+</html>
