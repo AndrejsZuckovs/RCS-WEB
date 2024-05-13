@@ -19,10 +19,16 @@
         //   alert(userInput.charAt(i));
         // }
         // VARIANTS #2
-        const text = Array.from(userInput);
-        for (var i = 0; i < text.length; i++) {
-          console.log(text[i]);
-          alert(text[i]);
+        // const text = Array.from(userInput);
+        // for (var i = 0; i < text.length; i++) {
+        //   console.log(text[i]);
+        //   alert(text[i]);
+        // }
+        // VARINATS #3
+        let arr = userInput.split(" ");
+        for (let i = 0; i < arr.length; i++) {
+          console.log(arr[i]);
+          alert(arr[i]);
         }
       }
     </script>

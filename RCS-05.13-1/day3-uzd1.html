@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8" />
+  <title>Andrejs day3-uzd1</title>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <div>Lūdzu ievadi vārdus!</div>
+    <div>
+      <input type="text" id="textInput" />
+      <button class="btn1" id="btn1" onclick="btnFunction()">Klik</button>
+    </div>
+    <script>
+      function btnFunction() {
+        console.log("btn1 Click!");
+        let userInput = document.getElementById("textInput").value;
+
+        if (userInput.length < 1) {
+          alert("Ievades lauks ir tukšs!");
+        } else {
+          let arr = userInput.split(" ");
+          let maxText = 0;
+          let index = 0;
+
+          maxText = arr[0];
+          for (let i = 0; i < arr.length; i++) {
+            if (arr[i].length > maxText.length) {
+              maxText = arr[i];
+              index = i;
+            }
+          }
+          console.log(arr[index]);
+          alert(arr[index]);
+        }
+      }
+    </script>
+  </body>
+</html>
