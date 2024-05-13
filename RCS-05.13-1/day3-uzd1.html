@@ -18,14 +18,16 @@
           alert("Ievades lauks ir tukšs!");
         } else {
           let arr = userInput.split(" ");
-          let maxText = 0;
+          let maxText = arr[0];
           let index = 0;
+          const number = /\d+/;
 
-          maxText = arr[0];
           for (let i = 0; i < arr.length; i++) {
-            if (arr[i].length > maxText.length) {
-              maxText = arr[i];
-              index = i;
+            if (!arr[i].match(number)) {
+              if (arr[i].length > maxText.length) {
+                maxText = arr[i];
+                index = i;
+              }
             }
           }
           console.log(arr[index]);
