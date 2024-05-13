@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTH-8" />
+  <title>Andrejs day2-usd1</title>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <div>
+      <input type="text" id="textInput" />
+      <button class="btn1" id="btn1" onclick="btnFunction()">Klik</button>
+    </div>
+    <script>
+      function btnFunction() {
+        console.log("btn1 Click!");
+        let userInput = document.getElementById("textInput").value;
+        //alert(userInput);
+        // VARIANTS #1
+        // for (var i = 0; i < userInput.length; i++) {
+        //   console.log(userInput.charAt(i));
+        //   alert(userInput.charAt(i));
+        // }
+        // VARIANTS #2
+        const text = Array.from(userInput);
+        for (var i = 0; i < text.length; i++) {
+          console.log(text[i]);
+          alert(text[i]);
+        }
+      }
+    </script>
+  </body>
+</html>
